@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Zimbelmann - Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_academics.css">
+</head>
+
+<body>
+    <!-- Header with shared navbar -->
+    <header>
+        <div id="navbar-placeholder">
+            <p style="display:none;">loading navbar...</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Masters Section -->
+        <section class="masters-section" id="masters">
+            <div class="section-content masters-content">
+                <div class="masters-details">
+                    <div class="masters-header">
+                        <h2 class="section-title">Masters</h2>
+                        <div class="underline-spacer"><span class="arrow-head"></span></div>
+                        <button class="btn-certificate-hover" id="open-certificate">
+                            <i class="fas fa-certificate"></i>
+                            <span class="btn-text">View Certificate</span>
+                        </button>
+                    </div>
+                    <p class="description">
+                        I completed my Master's degree in Physics at the University of Leipzig, specializing heavily in computational physics. The curriculum included advanced statistical physics and soft matter physics, before narrowing into a deep focus on computational methods, covering a wide variety of Monte Carlo simulations, molecular dynamics, protein folding, and most extensively the Ising model. This involved implementing multiple algorithms such as single spin flips and cluster algorithms, primarily in C++ for computational performance, with Python used for visualization and analysis. Optimizing the code was essential, as the precision required demanded an enormous number of simulations.
+                        <br><br>
+                        For my thesis, I worked with the university's large-scale computing cluster, running simulations via SSH and managing jobs across a distributed server environment. This gave me practical experience with high-performance computing infrastructure alongside the physics and machine learning work itself.
+                        <br><br>
+                        My thesis focused on applying convolutional neural networks to super-resolve Ising model spin configurations, training a network to reverse a renormalization procedure and reconstruct larger system sizes from smaller ones. This allowed computationally expensive large-scale simulations to be approximated by running smaller ones and scaling up their properties using AI. The work extended an existing method from the literature into the three-dimensional case and investigated finite size effects, combining statistical physics, Monte Carlo methods, and deep learning into a unified computational framework.
+                    </p>
+                </div>
+                <div class="master-thesis-image-wrapper">
+                    <div class="master-thesis-box">
+                        <img src="images/ising_superresolution.png" alt="Master Thesis Visualization" class="master-thesis-image">
+                        <a href="https://github.com/JanZimbelmann/Super-Resolution_CNNs_Ising_Model" 
+                            target="_blank" class="master-image-overlay">View on GitHub</a>
+                        <p class="master-thesis-caption">
+                            Super-resolving a 2D Ising spin configuration at critical Temperature with a Convolutional Neural Network
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for certificate — only once! -->
+            <div class="certificate-modal" id="certificate-modal">
+                <div class="certificate-overlay" id="certificate-overlay"></div>
+                <div class="certificate-content">
+                    <button id="close-certificate" class="close-button">&times;</button>
+                    <img src="images/university_certificate.png" alt="University Certificate">
+                </div>
+            </div>
+        </section>  
+
+
+        <!-- Bachelors -->
+        <section class="bachelors-section" id="bachelors">
+            <div class="section-content bachelors-content">
+                <div class="bachelors-image-wrapper">
+                    <div class="bachelors-image-box">
+                        
+                        <img src="images/bachelor.jpg" 
+                             alt="Bachelor Thesis Visualization" 
+                             class="bachelors-image">
+                
+                        <!-- GitHub Overlay -->
+                        <a href="https://github.com/JanZimbelmann/Reconstructing_Broadband_Dielectric_Properties"
+                           target="_blank"
+                           class="bachelor-github-overlay">
+                           View on GitHub
+                        </a>
+                
+                        <!-- Caption below image -->
+                        <p class="bachelor-image-caption">
+                            Reconstruction of broadband dielectric properties using computational modeling techniques.
+                        </p>
+                
+                    </div>
+                </div>
+
+                <!-- Text RIGHT -->
+                <div class="bachelors-details">
+                    <h2 class="section-title">Bachelors</h2>
+                    <p class="description">
+                        I completed my Bachelor's degree in Physics at the University of Leipzig. The curriculum covered the full breadth of classical and modern physics - from mechanics, thermodynamics and electrodynamics through to quantum mechanics, solid state physics and statistical physics, complemented by theoretical physics courses and extensive lab work across multiple semesters. Alongside the core physics curriculum, I also completed courses in computer science and computational physics, which laid the groundwork for my later focus on scientific computing and AI. My Bachelor thesis was written in collaboration with the UFZ and supervised by Prof. Dr. Jan Berend Meijer, focusing on the reconstruction of broadband dielectric properties using computational modeling techniques.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="school-section" id="school">
+            <div class="section-content school-content">
+        
+                <!-- TOP: Centered Header -->
+                <div class="school-header">
+                    <h2 class="section-title">School</h2>
+                    <p class="school-intro">
+                        I completed my Abitur at the Goethe-Schule Hannover, with advanced courses in Physics, Mathematics and English. My passion for science and programming was sparked early, largely inspired by my brother, whose enthusiasm proved to be a lasting influence.
+                    </p>
+                </div>
+        
+                <!-- BOTTOM: Text + Image -->
+                <div class="school-main">
+        
+                    <!-- Left text -->
+                    <div class="school-text">
+                        <p>
+                            The Goethe-Schule offered an extended music curriculum, including orchestra participation and dedicated music courses alongside the regular academic program. As part of the orchestra we performed two concerts a year, while my private piano teacher independently organized her own two concerts annually - meaning I was performing on stage regularly throughout my entire school years. I later picked up the guitar, which led to playing in a band after school and ultimately sparked my deeper interest in sound synthesis and SuperCollider.
+                        </p>
+                    </div>
+        
+                    <!-- Right image box -->
+                    <div class="school-image-wrapper">
+                        <div class="school-image-box">
+        
+                            <img src="images/mozart_flipped.jpg"
+                                 alt="School"
+                                 class="school-image">
+        
+                            <p class="school-image-caption">
+                                Performing as Mozart at a school concert, <br> this is me at the age of 12
+                            </p>
+        
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        </section>
+
+
+
+        <div id="endcard-placeholder"></div>
+    </main>
+
+
+    <script>
+        fetch('endcard.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('endcard-placeholder').innerHTML = data;
+            });
+    </script>
+    <!-- Navbar fetch script -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

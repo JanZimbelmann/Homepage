@@ -1,0 +1,328 @@
+/* ================================
+   EXPERIENCE PAGE — style_experience.css
+================================ */
+
+/* ================================
+   APPSFACTORY SECTION
+================================ */
+
+h2.section-title {
+    margin-bottom: 18px;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+.appsfactory-section {
+    padding: 80px 20px;
+    background: var(--color-bg-main);
+}
+
+
+.appsfactory-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 60px;
+    padding-left: calc(10% + 5% + 20px);
+    padding-top: 40px;
+    padding-right: 15%;
+}
+
+.appsfactory-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 60px;
+    padding-left: calc(10% + 5% + 20px);
+    padding-top: 40px;
+}
+
+.appsfactory-logo {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 24px;
+    filter: brightness(1.1);
+}
+
+.client-projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.client-project-box:nth-child(odd) {
+    margin-right: 10%;
+}
+
+.client-project-box:nth-child(even) {
+    margin-left: 10%;
+}
+
+.client-project-box {
+    background: var(--color-bg-surface);
+    padding: 20px 30px;
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.client-project-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.client-logo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: var(--border-radius-circle);
+    overflow: hidden;
+    background: var(--color-bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-logo img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+}
+
+/* ================================
+   HACKATHON SECTION
+================================ */
+
+#hackathon {
+    background-color: var(--color-bg-surface);
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hackathon .section-content {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#hackathon .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.hackathon-title {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.hackathon-title span {
+    color: #4cc9f0;
+    font-weight: 600;
+}
+
+.hackathon-image {
+    display: block;
+    margin: 0 auto 50px auto;
+    width: 750px;
+    max-width: 90%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+
+#hackathon .text {
+    text-align: center !important;
+}
+
+/* ================================
+   BRAINYMOTION SECTION
+================================ */
+
+#brainymotion {
+    background-color: var(--color-bg-main);
+    padding: 140px 0;
+}
+
+#brainymotion .section-content {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brainymotion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.brainymotion-text {
+    flex: 1;
+}
+
+.brainymotion-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.brainymotion-logo img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 24px;
+    display: block;
+}
+
+.brainymotion-courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.course-column-title {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-bg-surface);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.course-item {
+    font-size: var(--font-size-m);
+    color: var(--color-text-primary);
+    line-height: 1.5rem;
+}
+
+/* ================================
+   RESEARCH ASSISTANT SECTION
+================================ */
+
+#research-assistant {
+    background: var(--color-bg-surface);
+    padding: 60px 20px;
+}
+
+#research-assistant .section-title,
+#research-assistant .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.research-cards {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.research-card {
+    display: flex;
+    align-items: center;
+    background: var(--color-bg-main);
+    padding: 10px;
+    border-radius: var(--border-radius-m);
+    gap: 20px;
+    flex: 1 1 400px;
+    max-width: 700px;
+}
+
+.research-logo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.research-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.research-card .text {
+    text-align: left;
+    line-height: 1.4;
+}
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    .appsfactory-header {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .appsfactory-logo {
+        max-height: 55px;
+    }
+
+    .client-project-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .client-project-box:nth-child(odd),
+    .client-project-box:nth-child(even) {
+        margin: 0;
+    }
+
+    .client-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .client-logo img {
+        width: 130%;
+        height: 130%;
+    }
+
+    .brainymotion-header {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .brainymotion-logo {
+        justify-content: center;
+    }
+
+    .brainymotion-courses {
+        grid-template-columns: 1fr;
+    }
+
+    .research-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .research-logo {
+        width: 120px;
+        height: 120px;
+    }
+}

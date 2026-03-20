@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Zimbelmann - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder">
+            <p style="display:none;">loading navbar...</p>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-inner">
+
+            <p class="contact-eyebrow">// <span class="typewriter">code ∧ sound ∧ science</span><span class="contact-cursor"></span></p>            <p class="contact-tagline">
+                Have a project in mind or just want to say hello?
+            </p>
+
+            <div class="contact-divider"></div>
+
+            
+            <a id="contact-email-link" class="contact-email">
+                <i class="fas fa-envelope"></i>
+                <span id="contact-email-text"></span>
+            </a>
+
+            <div class="contact-chips">
+                <div class="contact-chip">
+                    <i class="fas fa-map-marker-alt"></i> Germany (CET)
+                </div>
+                <div class="contact-chip">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/JanZimbelmann" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="endcard-placeholder"></div>
+    <script>
+        fetch('endcard.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('endcard-placeholder').innerHTML = data;
+            });
+    </script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

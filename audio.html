@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Swiper CSS in <head> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Zimbelmann - Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_audio.css">
+
+    <!-- Prism.js CSS (choose a theme you like) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+    <!-- Prism.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+</head>
+
+<body>
+    <!-- Header with shared navbar -->
+    <header>
+        <div id="navbar-placeholder">
+            <p style="display:none;">loading navbar...</p>
+        </div>
+    </header>
+
+
+    <section class="supercollider-section" id="supercollider">
+        <div class="section-content">
+            <h2 class="section-title sc-title">SuperCollider</h2>
+        </div>
+        <div class="section-content supercollider-content">
+            <div class="supercollider-details">
+                <p class="description">
+                    SuperCollider is an open-source programming language and environment for real-time audio synthesis and algorithmic composition, developed since the mid-1990s and used in the fields of computer music, sound art and live coding. I have been working intensively with SuperCollider since 2017, focusing on algorithmic composition and developing my own custom ways of interacting with synthesizers, rather than live coding in the traditional sense.
+                    <br><br>
+                    Since 2022 I have been extending this work into hardware, building my own MIDI controllers using Arduino and later the RP2040 microcontroller, chosen for its significantly higher processing speed. The controllers are designed to interface directly with SuperCollider, combining custom-built hardware with real-time software synthesis into a single integrated performance instrument.
+                </p>
+            </div>
+            <div class="supercollider-media">
+                <div class="code-box">
+                    <div class="code-topbar">
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre class="line-numbers"><code class="language-source">// Simple SuperCollider Example
+{
+    var a=1/(1..12);
+    var sweep = Line.ar(start: 0, end: 1, dur: 10);
+    var trig_f = 9 * a * sweep.lincurve(0, 1, 0.2, 10, 6);
+    var trig = Impulse.ar(freq: trig_f);
+    var decay = LFTri.ar(freq: a).range(0.1, 1);
+    var sig = Ringz.ar(in: trig, freq: 99/b, decaytime: decay);
+    var hpf_f = sweep.lincurve(0, 1, 50, 15000, 5);
+    sig = HPF.ar(in: sig, freq: hpf_f);
+    sig = Splay.ar(inArray: sig)/4;
+    sig = sig + GVerb.ar(in: sig * sweep);
+}.play;</code></pre>
+                </div>
+                <div class="audio-box">
+                    <audio controls>
+                        <source src="audio/testsupercollider.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Synth Section -->
+
+    
+
+
+    <section class="synth-section" id="synth">
+    
+    
+    
+    <!-- Title full width on top -->
+    <div class="section-content">
+        <div class="synth-title-block">
+            <h2 class="section-title synth-title">Magnus Opus Synthesizer</h2>
+        </div>
+    </div>
+    <div class="section-content synth-content">
+
+        <!-- Left: Subtitle + First paragraph -->
+        <div class="synth-text">
+            <p class="synth-description-inline">
+                This synthesizer is my personal magnus opus, a large-scale custom-built instrument 3 years in the making. Its control surface comprises:
+            </p>
+            <ul class="synth-specs">
+                <li>202 potentiometers</li>
+                <li>56 encoders</li>
+                <li>19 faders</li>
+                <li>16 dual-axis XY joysticks</li>
+                <li>213 buttons (285 including encoder and joystick presses)</li>
+                <li>505 LEDs</li>
+                <li>LCD display</li>
+            </ul>
+        </div>
+
+        <!-- Right: Main image -->
+        <div class="synth-image-wrapper">
+            <img src="images/diysynth_small.jpg" alt="synth" class="synth-image">
+        </div>
+
+    </div>
+
+    <!-- Second paragraph full width below -->
+    <div class="section-content">
+        <p class="synth-description">
+            All controls transmit MIDI to SuperCollider through my audio interface, with every button capable of carrying multiple functions depending on context and programming. The synthesizer runs entirely on my own code, implementing a broad range of synthesis techniques including wavetable synthesis, FM synthesis and more, alongside samplers, loopers, arpeggiators, Euclidean rhythm algorithms for drums and cybernetic systems. The result is a fully self-contained instrument designed entirely around my own compositional and performative needs.
+        </p>
+    </div>
+
+
+        
+        <div class="synth-boxes">
+
+            <!-- Box 1: Image left, text right -->
+            <div class="synth-box synth-box-left">
+                <div class="synth-box-image">
+                    <img src="images/left.jpg" alt="Synth 1">
+                </div>
+                <div class="synth-box-text">
+                    <h4 class="synth-box-title">Left Side</h4>
+                    <p>
+                        The left side of the synthesizer houses a matrix of 16 rows of 12 potentiometers, with each row dedicated to a separate channel, covering instruments such as synth, drums, bass and guitar, among others. The drum channel is further subdivided into individual voices, including kick, snare and more. Each channel can be processed with a range of effects including distortion, tremolo, sidechain compression and glitch effects, and most notably interacts with a highly versatile looping algorithm. Every channel has its own dedicated loopers, each of which can be altered and manipulated in a variety of ways. These are just some of the functionalities each channel provides.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Box 2: Image right, text left -->
+            <div class="synth-box synth-box-right">
+                <div class="synth-box-text">
+                    <h4 class="synth-box-title">Right Side</h4>
+                    <p>
+                        The right side of the synthesizer is divided into many smaller sections, each functioning as a self-contained instrument. Every section can be reassigned to a different functionality at any time. This includes synthesizers that can be played via an external MIDI piano, as well as synthesizers that play autonomously. The synthesis engines range from simple frequency modulation to complex drum algorithms and cybernetic systems. The looper station can be fed directly into a sampler, allowing previously recorded loops to be cut and rearranged in real time, or used to play and slice drum loops. The right side also features a large number of dual-axis joysticks, for which I implemented an algorithm that maps the two dimensions of each joystick to a large number of synthesizer variables simultaneously, making a single joystick capable of controlling hundreds or even thousands of parameters at once. These are just some of the functionalities already implemented, with new ones being added continuously.
+                    </p>
+                </div>
+                <div class="synth-box-image">
+                    <img src="images/right.jpg" alt="Synth 2">
+                </div>
+            </div>
+        
+            <!-- Box 3: Image center, text left & right -->
+            <div class="synth-box synth-box-center">
+                <div class="synth-box-text left-text">
+                    <h4 class="synth-box-title">Foot Pedal</h4>
+                    <p>
+                        Alongside the main synthesizer, I constructed a wooden foot pedal featuring 6 buttons and 2 faders. While most of its functionality is also present in the larger synthesizer in some form, the foot pedal allows for hands-free interaction during performance, freeing up attention for the main instrument.
+                    </p>
+                </div>
+                <div class="synth-box-image center-image">
+                    <img src="images/pedal.jpg" alt="Synth 3">
+                </div>
+                <div class="synth-box-text right-text">
+                    <p>
+                        The pedal covers a wide range of functions including recording and backtracking loops, triggering drum algorithms, and controlling distortion levels for guitar or synthesizer. Its functionality can be switched with a single button press. For simplicity, three buttons remain fixed in their function at all times, while the remaining three buttons and both faders switch their assignment depending on the selected mode.
+                    </p>
+                </div>
+            </div>
+        
+
+
+            <!-- Box 4: Prototype-->
+            <div class="synth-box synth-box-left">
+                <div class="synth-prototype-image">
+                    <img src="images/prototype.jpg" alt="Synth 4">
+                </div>
+                <div class="synth-box-text">
+                    <h4 class="synth-box-title">First Prototype</h4>
+                    <p>
+                        This is an early prototype that preceded the main synthesizer, used in my previous setup as the foundation from which the larger instrument evolved. It features a grid of 12 by 8 potentiometers, originally serving a similar function to the left side of the main synthesizer. The prototype is no longer used for musical purposes, but I am considering repurposing it for visual interaction, where turning the knobs would control and manipulate visuals in a playful and intuitive way, much like the synthesizer does with sound.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- DiY Pedal -->
+    <section class="pedal-section" id="pedal">
+        <div class="section-content pedal-content">
+    
+            <!-- Left: Text -->
+            <div class="pedal-details">
+                <div class="pedal-title-block">
+                    <h2 class="title pedal-title">Self Built Effects Pedal</h2>
+                </div>
+                <p class="description">
+                    
+                    This project is still in its early stages. I am developing a line of standalone effects pedals and synthesizers built on Raspberry Pi and programmed in SuperCollider, distilling the work from my main synthesizer into a smaller and more consumer friendly form. SuperCollider makes it also possible to quickly develop custom instruments and effects tailored to the specific needs of an artist.
+                    <br><br>
+                    To move beyond hand wiring every component, I have begun designing my own PCBs in KiCad, which not only improves build quality and reliability but also lays the groundward for small scale production. While manufacturing at scale as a solo builder has its limits, the PCB designs make the process significantly more repeatable and efficient.
+
+
+                </p>
+            </div>
+    
+            <!-- Right: Swiper -->
+            <div class="pedal-swiper-wrapper">
+                <div class="swiper pedalSwiper">
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            <img src="images/pedal_front.jpg" alt="Pedal Front">
+                            <p class="slide-caption">
+                                Front view of the assembled pedal housing
+                            </p>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <img src="images/pedal_back.jpg" alt="Pedal Wiring">
+                            <p class="slide-caption">
+                                Internal wiring and Raspberry Pi integration
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/kicad.jpg" alt="Pedal Wiring">
+                            <p class="slide-caption">
+                                Design of previous wiring designed in KiCad
+                            </p>
+                        </div>
+                    </div>
+    
+                    <!-- Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+    
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <!-- Music Section -->
+<section class="music-section" id="music">
+
+    <!-- Title full width on top -->
+    <div class="section-content">
+        <div class="music-title-block">
+            <h2 class="section-title music-title">Music</h2>
+            <div class="music-notes">
+                <span class="note">♩</span>
+                <span class="note">♪</span>
+                <span class="note">♫</span>
+                <span class="note">♬</span>
+            </div>
+        </div>
+    </div>
+    <div class="section-content music-content">
+        <!-- Left: YouTube Embed -->
+        <div class="music-video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/qF1eNF9TiyY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="music-details">
+            <p class="description">
+                Under the artist name MVROWI, I make music using my self-built synthesizers, a MIDI piano and guitar. Inspired by a mix of black metal, breakbeats, noise and a strong emphasis on melody, the music explores melancholic atmospheres and loops that are broken down and reassembled live into something new. Everything heard is generated and interacted with in real time, with no playback or pre-recorded material involved. The video to the left is a recording of a spontaneous birthday concert, giving a glimpse into a live performance setting. I am continuously drawn towards more experimental sounds and textures.
+                <br><br>
+                I am also an active member of an experimental and noise label founded in 2025, which within its first year has already organized 7 concerts to strong reception. The label operates in genres that rarely find a dedicated platform, making it a meaningful space for artists working outside the mainstream.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+
+    <div id="endcard-placeholder"></div>
+
+    <script>
+        fetch('endcard.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('endcard-placeholder').innerHTML = data;
+            });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+ 

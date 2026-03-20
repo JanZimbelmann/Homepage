@@ -1,0 +1,499 @@
+/* ================================
+   ACADEMICS PAGE — style_academics.css
+================================ */
+
+/* ================================
+   MASTERS SECTION
+================================ */
+
+.masters-section {
+    background: var(--color-bg-main);
+    padding: 80px 20px;
+}
+
+.masters-content {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.masters-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.masters-header .section-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+.masters-header:has(.btn-certificate-hover:hover) .section-title {
+    color: var(--color-accent);
+    transition: color 0.2s ease;
+}
+
+.masters-header:has(.btn-certificate-hover:hover) .arrow-head {
+    border-left-color: var(--color-accent);
+}
+
+.masters-header:has(.btn-certificate-hover:hover) .underline-spacer::before {
+    background: var(--color-accent);
+    transition: background 0.6s ease;
+}
+
+.masters-header:has(.btn-certificate-hover:hover) .underline-spacer {
+    background: linear-gradient(
+        to right,
+        var(--color-accent) 0%, var(--color-accent) 0.5%, transparent 0.5%, transparent 1.0%,
+        var(--color-accent) 1.0%, var(--color-accent) 1.5%, transparent 1.5%, transparent 2.0%,
+        var(--color-accent) 2.0%, var(--color-accent) 2.5%, transparent 2.5%, transparent 3.0%,
+        var(--color-accent) 3.0%, var(--color-accent) 3.5%, transparent 3.5%, transparent 4.0%,
+        var(--color-accent) 4.0%, var(--color-accent) 4.5%, transparent 4.5%, transparent 5.0%,
+        var(--color-accent) 5.0%, var(--color-accent) 5.5%, transparent 5.5%, transparent 6.0%,
+        var(--color-accent) 6.0%, var(--color-accent) 6.5%, transparent 6.5%, transparent 7.0%,
+        var(--color-accent) 7.0%, var(--color-accent) 7.5%, transparent 7.5%, transparent 8.0%,
+        var(--color-accent) 8.0%, var(--color-accent) 9.0%, transparent 9.0%, transparent 10.0%,
+        var(--color-accent) 10.0%, var(--color-accent) 11.0%, transparent 11.0%, transparent 12.0%,
+        var(--color-accent) 12.0%, var(--color-accent) 13.5%, transparent 13.5%, transparent 14.5%,
+        var(--color-accent) 14.5%, var(--color-accent) 16.0%, transparent 16.0%, transparent 17.5%,
+        var(--color-accent) 17.5%, var(--color-accent) 19.5%, transparent 19.5%, transparent 21.0%,
+        var(--color-accent) 21.0%, var(--color-accent) 23.5%, transparent 23.5%, transparent 25.0%,
+        var(--color-accent) 25.0%, var(--color-accent) 28.0%, transparent 28.0%, transparent 30.0%,
+        var(--color-accent) 30.0%, var(--color-accent) 33.5%, transparent 33.5%, transparent 36.0%,
+        var(--color-accent) 36.0%, var(--color-accent) 40.0%, transparent 40.0%, transparent 43.0%,
+        var(--color-accent) 43.0%, var(--color-accent) 47.5%, transparent 47.5%, transparent 50.0%,
+        var(--color-accent) 50.0%, var(--color-accent) 55.0%, transparent 55.0%, transparent 58.0%,
+        var(--color-accent) 58.0%, var(--color-accent) 64.0%, transparent 64.0%, transparent 67.0%,
+        var(--color-accent) 67.0%, var(--color-accent) 74.0%, transparent 74.0%, transparent 77.0%,
+        var(--color-accent) 77.0%, var(--color-accent) 100%
+    );
+    transition: background 0.6s ease;
+}
+
+.underline-spacer {
+    flex: 1;
+    position: relative;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        white 0%, white 0.5%, transparent 0.5%, transparent 1.0%,
+        white 1.0%, white 1.5%, transparent 1.5%, transparent 2.0%,
+        white 2.0%, white 2.5%, transparent 2.5%, transparent 3.0%,
+        white 3.0%, white 3.5%, transparent 3.5%, transparent 4.0%,
+        white 4.0%, white 4.5%, transparent 4.5%, transparent 5.0%,
+        white 5.0%, white 5.5%, transparent 5.5%, transparent 6.0%,
+        white 6.0%, white 6.5%, transparent 6.5%, transparent 7.0%,
+        white 7.0%, white 7.5%, transparent 7.5%, transparent 8.0%,
+        white 8.0%, white 9.0%, transparent 9.0%, transparent 10.0%,
+        white 10.0%, white 11.0%, transparent 11.0%, transparent 12.0%,
+        white 12.0%, white 13.5%, transparent 13.5%, transparent 14.5%,
+        white 14.5%, white 16.0%, transparent 16.0%, transparent 17.5%,
+        white 17.5%, white 19.5%, transparent 19.5%, transparent 21.0%,
+        white 21.0%, white 23.5%, transparent 23.5%, transparent 25.0%,
+        white 25.0%, white 28.0%, transparent 28.0%, transparent 30.0%,
+        white 30.0%, white 33.5%, transparent 33.5%, transparent 36.0%,
+        white 36.0%, white 40.0%, transparent 40.0%, transparent 43.0%,
+        white 43.0%, white 47.5%, transparent 47.5%, transparent 50.0%,
+        white 50.0%, white 55.0%, transparent 55.0%, transparent 58.0%,
+        white 58.0%, white 64.0%, transparent 64.0%, transparent 67.0%,
+        white 67.0%, white 74.0%, transparent 74.0%, transparent 77.0%,
+        white 77.0%, white 100%
+    );
+}
+
+.underline-spacer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 1.8rem;
+    background: white;
+}
+
+.arrow-head {
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 8px solid white;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.masters-details .description {
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+
+
+
+.master-thesis-box {
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-m);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.master-thesis-image {
+    width: 100%;
+    border-radius: var(--border-radius-s);
+    display: block;
+}
+
+.master-thesis-caption {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.master-image-overlay {
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+    background: var(--color-accent);
+    color: var(--color-bg-main);
+    font-weight: var(--font-weight-semibold);
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    z-index: 5;
+}
+
+.master-image-overlay::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-25deg) translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.master-image-overlay:hover::after {
+    transform: skewX(-25deg) translateX(100%);
+}
+
+.master-image-overlay:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.btn-certificate-hover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-bg-main);
+    color: var(--color-text-primary);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+
+.btn-certificate-hover .btn-text {
+    display: none;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.btn-certificate-hover:hover {
+    width: auto;
+    padding: 0 16px;
+    border-radius: 25px;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    color: var(--color-accent);
+}
+
+.btn-certificate-hover:hover .btn-text {
+    display: inline;
+}
+
+.btn-certificate-hover:hover i {
+    display: none;
+}
+
+.certificate-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.4);
+}
+
+.certificate-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-m);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.certificate-content img {
+    width: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
+/* ================================
+   BACHELORS SECTION
+================================ */
+
+.bachelors-section {
+    background: var(--color-bg-surface);
+    padding: 80px 20px;
+}
+
+.bachelors-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.bachelors-image-wrapper {
+    flex: 1;
+    max-width: 500px;
+}
+
+.bachelors-details {
+    flex: 1;
+}
+
+.bachelors-details .section-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.bachelors-image-box {
+    background: var(--color-bg-main);
+    border-radius: var(--border-radius-m);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bachelors-image {
+    width: 100%;
+    border-radius: var(--border-radius-s);
+    display: block;
+}
+
+.bachelor-image-caption {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.bachelor-github-overlay {
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+    background: var(--color-accent);
+    color: var(--color-bg-main);
+    font-weight: var(--font-weight-semibold);
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    z-index: 5;
+}
+
+.bachelor-github-overlay::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-25deg) translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.bachelor-github-overlay:hover::after {
+    transform: skewX(-25deg) translateX(100%);
+}
+
+.bachelor-github-overlay:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* ================================
+   SCHOOL SECTION
+================================ */
+
+.school-section {
+    background: var(--color-bg-main);
+    padding: 100px 20px;
+}
+
+.school-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.school-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.school-header .section-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.school-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.school-text {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.school-image {
+    width: 100%;
+    display: block;
+}
+
+.school-image-caption {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.school-intro {
+    text-align: center;
+}
+
+.school-image-wrapper {
+    flex: 1;
+    position: relative;
+    padding-right: 20px;
+    overflow: visible;
+}
+
+.school-image-box {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+}
+
+.school-image-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    background: var(--color-bg-surface);
+    z-index: -1;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    .bachelors-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bachelors-details {
+        order: 1;
+    }
+
+    .bachelors-image-wrapper {
+        order: 2;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .school-main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .school-text,
+    .school-image-wrapper {
+        flex: unset;
+        width: 100%;
+        padding: 0;
+    }
+
+    .school-image {
+        width: 60%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+}
