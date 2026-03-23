@@ -114,13 +114,13 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3 Q25 0 30 3 Q35 6 40 3' stroke='%2338bdf8' stroke-width='1.5' fill='none' opacity='0.8'/%3E%3C/svg%3E");
     background-repeat: repeat-x;
     background-size: 40px 6px;
-    animation: sine-scroll 2s linear infinite;
+    /* animation: sine-scroll 2s linear infinite; */
 }
-
+/* 
 @keyframes sine-scroll {
     from { background-position: 0 0; }
     to   { background-position: 40px 0; }
-}
+} */
 
 
 .music-video-caption {
