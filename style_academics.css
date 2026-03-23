@@ -501,10 +501,9 @@ body.modal-open {
         width: 100%;
         padding: 0;
     }
-
     .school-image {
-        width: 60%;
-        max-width: 400px;
+        width: 80%;
+        max-width: 550px;
         margin: 0 auto;
         display: block;
     }
