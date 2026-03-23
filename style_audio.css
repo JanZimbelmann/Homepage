@@ -411,6 +411,46 @@
 }
 
 
+.upcoming-release {
+    margin-top: 60px;
+    padding: 30px 60px; /* increase horizontal padding */
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.upcoming-release-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 40px; /* or whatever matches your section padding */
+}
+.upcoming-release-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upcoming-release-right {
+    flex: 1;
+}
+
+.upcoming-release-description {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .upcoming-release {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
 
 /* ================================
    MUSIC SECTION
