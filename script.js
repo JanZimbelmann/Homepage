@@ -35,13 +35,18 @@ const certModal = document.getElementById("certificate-modal");
 if (openCertBtn && closeCertBtn && certModal) {
   openCertBtn.addEventListener("click", () => {
     certModal.style.display = "block";
-  });
-  closeCertBtn.addEventListener("click", () => {
+    document.body.classList.add("modal-open");
+});
+
+closeCertBtn.addEventListener("click", () => {
     certModal.style.display = "none";
-  });
-  document.getElementById("certificate-overlay").addEventListener("click", () => {
+    document.body.classList.remove("modal-open");
+});
+
+document.getElementById("certificate-overlay").addEventListener("click", () => {
     certModal.style.display = "none";
-  });
+    document.body.classList.remove("modal-open");
+});
 }
 
 // Copy button

@@ -122,6 +122,31 @@
     to   { background-position: 40px 0; }
 }
 
+
+.music-video-caption {
+    margin-top: 10px;
+    font-size: var(--font-size-s);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.music-video-box {
+    flex: 1;
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-m);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.music-video-caption {
+    margin-top: 10px;
+    font-size: var(--font-size-m);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    text-align: center;
+}
 /* ================================
    SYNTH SECTION
 ================================ */
@@ -384,6 +409,8 @@
     letter-spacing: 0.15em;
  
 }
+
+
 
 /* ================================
    MUSIC SECTION
